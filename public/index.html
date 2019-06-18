@@ -2,49 +2,37 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
     <title>Scraping With Mongoose</title>
-    <style>
-      body {
-        background-color: #f2f6d0;
-      }
-      #wrapper {
-        width: 960px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 5%;
-      }
-      #articles {
-        display: inline-block;
-        overflow: auto;
-        width: 60%;
-        height: 700px;
-      }
-      #notes {
-        float: right;
-        width: 30%;
-      }
-      textarea,
-      input {
-        display: block;
-        width: 100%;
-        background-color: #fcf5c7;
-      }
-      input {
-        height: 36px;
-        font-size: 24px;
-      }
-      textarea {
-        height: 200px;
-        font-size: 18px;
-      }
-    </style>
   </head>
   <body>
-    <div id="wrapper">
-      <h1>Reddit Scraper</h1>
-      <h2><i>Articles:</i></h2>
-      <div id="articles"></div>
-      <div id="notes"></div>
+    <div class="container mx-auto">
+      <div class="card bg-light text-center">
+        <img
+          class="container mx-auto"
+          id="logo"
+          src="http://obscuradigital.com/wp-content/uploads/2015/12/20-ny-times-logo.w529.h529.2x.jpg"
+          alt=""
+        />
+        <h1>New York Times Technology Section Scraper</h1>
+        <button type="button" id="scrapeButton" class="btn btn-primary">
+          Scrape the latest articles!
+        </button>
+        <h2><i>Articles:</i></h2>
+        <h4><i>Click on each article to add your thoughts on the topic!</i></h4>
+        <div class="container">
+          <div class="row">
+            <div class="card bg-light text-center" id="articles"></div>
+            <div class="card bg-light text-center" id="notes"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="app.js"></script>
