@@ -11,6 +11,7 @@ $.getJSON("/articles", function(data) {
         "<br />" +
         data[i].link +
         "<br />" +
+        "Article Summary: " +
         data[i].summary +
         "</p>"
     );
@@ -40,7 +41,9 @@ $(document).on("click", "p", function() {
       $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
       // A button to submit a new note, with the id of the article saved to it
       $("#notes").append(
-        "<button data-id='" + data._id + "' id='savenote'>Save Note</button>"
+        "<button data-id='" +
+          data._id +
+          "' id='savenote'' class='btn btn-success''>Save Note</button>"
       );
 
       // If there's a note in the article
@@ -80,4 +83,9 @@ $(document).on("click", "#savenote", function() {
   // Also, remove the values entered in the input and textarea for note entry
   $("#titleinput").val("");
   $("#bodyinput").val("");
+});
+
+// When you click the scrapeButton button
+$(document).on("click", "#scrapeButton", function() {
+  location.href = "http://localhost:3000/scrape";
 });
