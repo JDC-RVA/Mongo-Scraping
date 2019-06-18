@@ -87,5 +87,5 @@ $(document).on("click", "#savenote", function() {
 
 // When you click the scrapeButton button
 $(document).on("click", "#scrapeButton", function() {
-  location.href = "http://localhost:3000/scrape";
+  location.href = "/scrape";
 });
